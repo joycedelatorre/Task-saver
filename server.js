@@ -28,21 +28,21 @@ connection.connect(function(err){
 });
 
 app.get("/", function(req, res){
-	connection.query("SELECT * FROM tasks", function(err, resuslts){
+	connection.query("SELECT * FROM tasks", function(err, results){
 		if(err) throw err;
 		//Test it 
 		//console.log('The solution is: ' +  data)
 		//Test it
-		//return res.send(data);
-		res.render("index", {tasks:data});
+		// return res.send(data);
+		res.render("index", {task:results});
 	});
 });
 
 app.post("/", function(req, res){
-	//console.log('You sent ' + req.body.task);
+	console.log('You sent ' + req.body.task);
 	//Test it
 	//return res.send('You sent '+ req.body.task);
-	connections.query("INSERT INTO tasks(task) VALUES (?)", [req.body.task], function(err, resut){
+	connection.query("INSERT INTO tasks(task) VALUES (?)", [req.body.task], function(err, results){
 		if (err) throw err;
 		res.redirect("/");
 	});
