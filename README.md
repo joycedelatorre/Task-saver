@@ -4,4 +4,4 @@
 
 ### User will be able to add and list all the tasks.
 
-![tasks](https://github.com/joycedelatorre/Task-saver/tree/master/images)
+![tasks](https://github.com/joycedelatorre/Task-saver/blob/master/images/task_saver.png)
