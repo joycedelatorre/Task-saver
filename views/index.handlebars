@@ -1,0 +1,17 @@
+<h1> Task Saver</h1>
+
+<h3> Save the task you need to get to do later </h3>
+
+<ul>
+	{{#each task}}
+		<li>
+			<p>ID: {{this.id}}</p>
+			<p>Task: {{this.task}}</p>
+		</li>
+	{{/each}}
+</ul>
+
+<form action ="/" method="POST">
+	<textare type="text" name= "task"></textarea>
+	<button type="submit">Submit</button>
+</form>
